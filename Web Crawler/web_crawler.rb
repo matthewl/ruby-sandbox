@@ -13,8 +13,7 @@ require 'time'
 # - Generate a CSV file containing URL, title, and HTTP status code (e.g 200 or 404)
 
 class WebCrawler
-  DOMAIN = 'https://www.clubsystems.com/'
-  OPTIONAL_DOMAIN = 'https://www.clubsystems.com/'
+  DOMAIN = '' # Add your domain to crawl
   INTERVAL = 0.4
 
   def initialize
@@ -59,7 +58,7 @@ class WebCrawler
   end
 
   def starts_with_domain?(url)
-    url.start_with?(DOMAIN) || url.start_with?(OPTIONAL_DOMAIN)
+    url.start_with?(DOMAIN)
   end
 end
 
