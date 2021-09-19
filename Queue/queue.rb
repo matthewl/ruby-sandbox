@@ -47,13 +47,13 @@ class Queue
   def dequeue
     return nil unless self.size.positive?
 
-    return_data = self.front.data
+    data = self.front.data
 
     self.front = front.next
     self.back = nil if self.size == 1
     self.size -= 1
 
-    return return_data
+    return data
   end
 
   # Returns the front element in the queue without dequeing it
